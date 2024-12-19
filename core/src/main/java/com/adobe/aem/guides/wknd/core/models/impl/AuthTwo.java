@@ -1,21 +1,22 @@
 package com.adobe.aem.guides.wknd.core.models.impl;
 
-import com.adobe.aem.guides.wknd.core.models.support.Author;
+import com.adobe.aem.guides.wknd.core.models.Author;
 import org.apache.sling.models.annotations.Default;
 import org.apache.sling.models.annotations.Model;
-import org.osgi.resource.Resource;
+import org.apache.sling.api.resource.Resource;
 
 import javax.inject.Inject;
 
-@Model(adaptables = Resource.class, adapters = Model.class)
+@Model(adaptables = Resource.class, adapters = Author.class)
 public class AuthTwo implements Author {
 
     @Inject
     @Default(values = "Def")
-    String text;
+     String text;
 
     @Inject
-    String text2;
+    @Default(values = "text2")
+     String text2;
 
     @Override
     public String getText() {

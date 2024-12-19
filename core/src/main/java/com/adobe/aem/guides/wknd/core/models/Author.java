@@ -1,4 +1,4 @@
-package com.adobe.aem.guides.wknd.core.models.support;
+package com.adobe.aem.guides.wknd.core.models;
 
 public interface Author {
     String getText();
